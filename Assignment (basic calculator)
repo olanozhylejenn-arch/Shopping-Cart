@@ -1,0 +1,37 @@
+x = 300
+
+print("Find the closest number to", x)
+
+a = int(input("Enter first number: "))
+b = int(input("\nEnter second number: "))
+c = int(input("\nEnter third number: "))
+
+da = abs(a - x)
+db = abs(b - x)
+dc = abs(c - x)
+
+# All equal distance
+if da == db == dc:
+    print(f"\nLetter A, B and C or {a}, {b}, {c} are all equally closest number to {x}")
+
+# A and B equal and closer than C
+elif da == db and da < dc:
+    print(f"\nLetter A and B or {a} and {b} are both the closest number to {x}")
+
+# A and C equal and closer than B
+elif da == dc and da < db:
+    print(f"\nLetter A and C or {a} and {c} are both the closest number to {x}")
+
+# B and C equal and closer than A
+elif db == dc and db < da:
+    print(f"\nLetter B and C or {b} and {c} are both the closest number to {x}")
+
+# One letter closest number
+elif da < db and da < dc:
+    print(f"\nLetter A or {a} is the closest number to {x}")
+
+elif db < da and db < dc:
+    print(f"\nLetter B or {b} is the closest number to {x}")
+
+else:
+    print(f"\nLetter C or {c} is the closest number to {x}")
