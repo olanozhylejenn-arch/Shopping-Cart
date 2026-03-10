@@ -1,0 +1,19 @@
+def find_largest_number(a, b, c):
+    largest = a
+    letter = "A"
+    if b > largest:
+        largest = a
+        letter = "B"
+    if c > largest:
+        largest = c
+        letter = "C"
+        return letter, largest
+        
+print('Find the largest number')  
+val1 = int(input("Enter first number  :"))
+val2 = int(input("Enter second number :"))
+val3 = int(input("Enter third number  :"))
+
+letter, largest = find_largest_number(val1, val2, val3)
+
+print(f"Letter {letter} is the largest number with a value of {largest}.")
